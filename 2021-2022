@@ -1,0 +1,520 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta name="theme-color" content="#0C5270"/>
+    <link rel="shortcut icon" href="./img/152.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="manifest" href="./manifest.json">
+    <meta charset="utf-8"/>
+    <meta name="Description" content="一个兰兰想的个人网站, 涵盖他写的博客, 以及他拍的照片, 做的应用, 听的歌, 画的画~ "/>
+    <title>兰兰想的世界 LanHao</title>
+    <meta name="Keywords" content="兰兰想,兰兰想的世界,兰兰想的魔法世界,兰兰想的博客"/>
+    <meta name="google-site-verification" content="phju-__CWVhpDG8aMtHZoPmajYM1mFL-5huAXnCvb0k"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="兰兰想的世界">
+    <link rel="apple-touch-icon" href="./img/icon.png">
+    <style>
+        .img-container {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 300px;
+            border:solid seagreen 10px;
+            transition: all 0.3s;
+        }
+
+        .img {
+            height: 300px;
+            transition: all 0.3s;
+            margin: -20px auto 0 -40px;
+        }
+
+        .albumCover {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            overflow: hidden;
+        }
+
+        .animation-flick {
+            animation-name: flick;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes flick {
+            0% {
+                opacity: 0;
+                transform: rotateX(360deg);
+            }
+            50% {
+                opacity: 1;
+                transform: rotateX(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: rotateX(360deg);
+            }
+        }
+
+        .link {
+            position: relative;
+            -webkit-transition: -webkit-clip-path 275ms ease;
+            transition: -webkit-clip-path 275ms ease;
+            transition: clip-path 275ms ease;
+            transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+        }
+
+        .link:hover h4::before, .link:focus h4::before {
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .link h4 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .link h4::before {
+            position: absolute;
+            content: attr(data-content);
+            text-decoration: underline;
+            -webkit-text-decoration-color: #1619cb;
+            -webkit-clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+            clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+            -webkit-transition: -webkit-clip-path 275ms ease;
+            transition: -webkit-clip-path 275ms ease;
+            transition: clip-path 275ms ease;
+            transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+        }
+
+        .underline{
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container p-4 p-md-0">
+    <div class="text-center pt-3">
+        <h1 style="font-size: 5rem" class="text-success">兰浩 LanHao</h1>
+    </div>
+    <div class="text-center mt-5">
+        <h3>敢于创新，乐于实干</h3>
+        <h3>Keep creating great things</h3>
+    </div>
+
+    <div class="text-left" style="margin-top: 200px;">
+        <h3>最近事项</h3>
+        <h3>Recently</h3>
+        <hr style="border-color: black"/>
+        <div class="row">
+            <div class="col-md-2 text-secondary">
+                <h4>Year 2020</h4>
+                <h4>Nov.</h4>
+            </div>
+            <div class="col-md-10">
+                <h4>腾讯 Serverless <a
+                        href="https://mp.weixin.qq.com/s?__biz=Mzg4NzEyMzI1NQ==&mid=2247487869&idx=1&sn=922ccfd88bf5c63a54e29f8461de2103">优秀应用奖（前四）</a>
+                    应邀在其公众号写文。</h4>
+                <h4>Tencent Serverless good application prize 2nd. Got invited write articles.</h4>
+                <a href="https://mp.weixin.qq.com/s?__biz=Mzg4NzEyMzI1NQ==&mid=2247488350&idx=1&sn=f0ecc7552519c592b4d12b5478974ef0">
+                    文章：使用腾讯云 Serverless 生成你的 GIT 代码年历！
+                </a><br>
+                <a href="https://cloud.tencent.com/developer/article/1769037#%E4%BC%98%E7%A7%80%E4%BD%9C%E8%80%85%E5%A5%9610%E5%90%8D%EF%BC%9A" class="ml-3 text-secondary">
+                    ↳Year 2021 Jan. 荣获 腾讯云+社区2020年度征文优秀作者奖 | Tencent Cloud+ community 2020 Great author.
+                </a>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-2">
+                <h4>Year 2020</h4>
+                <h4>Mar.</h4>
+            </div>
+            <div class="col-md-10">
+                <h4>在 CNVD 国家信息安全漏洞共享平台 提交 Typecho <span style="color: darkred">通用型高危漏洞。</span></h4>
+                <h4>Submit security flaws about Typecho on <a
+                        href="https://en.wikipedia.org/wiki/Chinese_National_Vulnerability_Database">Chinese National
+                    Vulnerability Database(CNVD), <span style="color: darkred">Level: High.</span></a></h4>
+                <a href="https://www.cnvd.org.cn/flaw/show/CNVD-2020-23529">
+                    文章：Typecho存在文件上传漏洞
+                </a>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-2">
+                <h4>Year 2020</h4>
+                <h4>Feb.</h4>
+            </div>
+            <div class="col-md-10">
+                <h4>拿到了人生第一张软件著作权，耶！</h4>
+                <h4>Got first software copyright certificate in my life! </h4>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-2">
+                <h4>Year 2017</h4>
+                <h4>Jan.</h4>
+            </div>
+            <div class="col-md-10">
+                <h4>2017年百度网络大过年专题 贴吧 app 及电脑 banner 图设计。</h4>
+                <h4>Design app banner & web page banner for Baidu at 2017 spring festival.</h4>
+                <a href="https://web.archive.org/web/20170121074254/https://tieba.baidu.com/index.html">网页存档：百度贴吧电脑端 -
+                    金鸡嘹亮，唱响中国</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center" style="margin-top: 150px; margin-bottom: 150px">
+        <div style="max-width: 600px;margin:0 auto;cursor: pointer" class="bg-success">
+            <h2 class="text-white">我的微信 lanhaooclub</h2>
+        </div>
+    </div>
+
+    <div class="text-left">
+        <a class="link text-dark" href="https://blog.lanhaoo.club">
+            <h4 data-content="我的博客 - 脑海中的创意, 生活中的点滴">我的博客 - 脑海中的创意, 生活中的点滴</h4>
+            <br>
+            <h4 data-content="My Blog">My Blog</h4>
+            <br>
+            <h4>Creations in My Mind, Sparks in My Life, Not Wasted</h4>
+        </a>
+    </div>
+
+    <div class="row" style="margin-top: 150px;">
+        <div class="col-md-6 text-left">
+            <a href="https://github.com/LanHao0">
+                <img style="height: 100px"
+                     src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.2.1/icons/github.svg"/>
+            </a>
+            <h5 class="mt-2">近30日代码耗时</h5>
+            <h4>Coded in 30 days: <span id="span_codeHour" class="odometer">...</span> h</h4>
+            <h6 class="mt-2">今年代码提交</h6>
+            <h6>Git commit this year: <span id="span_codeSubmit" class="odometer">...</span> times</h6>
+            <p class="text-secondary">Updated at: <span id="span_codeTime">...</span> (From <span
+                    style="text-decoration: underline">WakaTime</span>)</p>
+
+        </div>
+
+        <div class="col-md-6 text-left justify-content-center align-self-center">
+            <div class="albumCover animation-flick" id="cover_container">
+                <img id="albumCover" style="height: 100px" src="http://lanhaoo.club/img/Spotify_Icon_RGB_Black.png"/>
+            </div>
+            <h5 class="mt-2"><span id="playingDes">...</span> <span id="time"></span></h5>
+            <div class="progress" style="height: 1px;">
+                <div id="songProgress" class="progress-bar" role="progressbar" style="width: 0;" aria-valuenow="0"
+                     aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h3><span id="spotify_albumName">...</span></h3>
+            <h5 class="text-secondary"><span id="spotify_artistName">...</span></h5>
+            <p class="text-secondary">Updated at: <span id="span_spotifyTime">...</span> (From <span
+                    style="text-decoration: underline">Spotify</span>)</p>
+
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6 mb-4 justify-content-center align-self-center">
+            <div style="border-bottom: solid 6px darkblue;width: 80%">
+                <h5>My Digital Wellbeing</h5>
+                <h3>我的数字健康</h3>
+            </div>
+            <h6 class="text-secondary">RealTime updating</h6>
+            <p class="mb-1"><span id="span_leftToUpdateMusic" style="background-color: darkblue;color: white">...</span>
+                to update MUSIC</p>
+            <p class="mb-1"><span id="span_leftToUpdateSteps" style="background-color: darkblue;color: white">...</span>
+                s to update STEPS</p>
+            <p class="mb-1"><span id="span_leftToUpdateCode" style="background-color: darkblue;color: white">...</span>
+                s to update CODE STATUS</p>
+        </div>
+        <div class="col-md-6 text-left">
+            <a href="https://github.com/LanHao0">
+                <img style="height: 100px"
+                     src="./img/foot.jpg"/>
+            </a>
+            <h4 class="mt-2">今日步数</h4>
+            <h4>Walked today: <span id="span_todayStep" class="odometer">...</span> steps</h4>
+            <h6 class="mt-2">30天步数</h6>
+            <h6>Walked in 30 days: <span id="span_monthStep" class="odometer">...</span> steps</h6>
+            <p class="text-secondary">Updated at: <span id="span_stepTime">...</span> (From <span
+                    style="text-decoration: underline">Google Fit</span>)</p>
+        </div>
+
+    </div>
+
+    <div class="row mt-4 p-3 border border-secondary text-center" style="border-radius: 20px">
+        <div style="width: 100%">
+            <img style="max-width: 100%;" src="https://lanhaoo.club/friendSign.jpg">
+        </div>
+        <div style="width: 100%">
+            <img style="max-width: 100%;" src="https://lanhaoo.club/sheraze.png">
+        </div>
+    </div>
+
+
+    <div class="row mt-4">
+        <h5>更多：
+            <a class="text-secondary underline" href="https://www.lanhaoo.club/myArtWorksIn3D/">我的建模作品</a>
+            <a class="text-secondary underline" href="https://www.lanhaoo.club/gallery/">摄像馆</a>
+            <a class="text-secondary underline" href="https://www.lanhaoo.club/myApps/#/app/UDPChat%20%E5%B1%80%E5%9F%9F%E7%BD%91">应用（UDPChat 局域网）</a>
+            <a class="text-secondary underline" href="https://www.lanhaoo.club/musicr/#/all">音乐分享</a>
+            <a class="text-secondary underline" href="https://www.lanhaoo.club/stickers/">表情包</a>
+            <a class="text-secondary underline" href="https://www.lanhaoo.club/font/">字体</a>
+            <a class="text-secondary underline" href="https://www.lanhaoo.club/tools/markdown.html">MarkDown编辑器</a>
+            <a class="text-secondary underline" href="https://www.lanhaoo.club/lab/colorgenerator.html">颜色生成器</a>
+        </h5>
+    </div>
+
+    <div class="mt-5 text-center text-secondary">From: 2017 March - 2022 解释权所有 All rights reserved.</div>
+</div>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        console.log('CLIENT: service worker registration in progress.');
+        navigator.serviceWorker.register('./service-worker.js').then(function () {
+            console.log('CLIENT: service worker registration complete.');
+        }, function () {
+            console.log('CLIENT: service worker registration failure.');
+        });
+    } else {
+        console.log('CLIENT: service worker is not supported.');
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+<script>
+    window.addEventListener('load', () => {
+        quicklink.listen();
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/odometer@0.4.8/odometer.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/odometer@0.4.8/themes/odometer-theme-default.css">
+<script>
+
+    function setCodeHour() {
+        axios.get("/wakatime_chart/api_30day_hour.php")
+            .then(res => {
+                let hours = 0;
+                let json_data = res.data;
+                for (let i = 0; i < json_data.data.length; i++) {
+                    hours += (json_data.data[i].grand_total.total_seconds / 36) / 100;
+                }
+                document.getElementById("span_codeHour").innerText = hours.toFixed(2).toString();
+                document.getElementById("span_codeTime").innerText = json_data.data[json_data.data.length - 1].range.date;
+            })
+        let gitlabCommits = [];
+        let gitlabCommitsCount = 0;
+        let githubCommitsCount = 0;
+        let allGithubCommitsCount = 0;
+        axios.get("/wakatime_chart/api_github_commits.php")
+            .then(res => {
+                data = res.data;
+                allGithubCommitsCount = data.contributions.reduce((a, b) => a + b.count, 0);
+
+                githubCommitsCount = data.contributions.filter(item => item.date.substr(0, 4) === '2022').reduce((a, b) => a + b.count, 0);
+                axios.get("/wakatime_chart/api_gitlab_commits.php")
+                    .then(res => {
+                        if (res.data) {
+                            let a = JSON.stringify(res.data);
+                            a = a.replace('{', '').replace('}', '');
+                            let b = a.split(",");
+                            for (let item of b) {
+                                let c = item.split(":");
+                                if (c[0].substr(1,4)==='2022'){
+                                    gitlabCommits.push({
+                                        date: c[0].replace('"', '').replace('"', ''),
+                                        count: parseInt(c[1])
+                                    })
+                                }
+                            }
+                            gitlabCommitsCount = gitlabCommits.reduce((a, b) => a + b.count, 0);
+                            console.log(gitlabCommitsCount)
+                            document.getElementById('span_codeSubmit').innerText = gitlabCommitsCount + githubCommitsCount;
+                        }
+                    })
+
+            })
+
+
+    }
+
+    var getCurrent;
+
+    function getRecentPlay() {
+        setCounter('span_leftToUpdateMusic');
+        axios
+            .get("https://spotify.lanhaoo.club/recentPlaying")
+            .then(res => {
+                const data = res.data;
+                document.getElementById('albumCover').src = data.items[0].track.album.images[0].url;
+                const playedAt = new Date(data.items[0].played_at).getTime();
+                let ago = (new Date().getTime() - playedAt) / 1000;
+
+                if (ago / 60 > 60) {
+                    if (Math.floor(ago / 3600) > 23) {
+                        ago = Math.floor((ago / 3600) / 24) + 'd'
+                    } else {
+                        ago = Math.floor(ago / 3600) + 'h';
+                    }
+
+                } else {
+                    ago = Math.floor(ago / 60) + 'm'
+                }
+                //小于一小时显示分钟，大于24小时显示天
+                document.getElementById('playingDes').innerText = '最近播放 Recent Playing - ' + ago;
+                document.getElementById('cover_container').setAttribute("class", "albumCover");
+                document.getElementById('spotify_albumName').innerText = data.items[0].track.name;
+                document.getElementById('span_spotifyTime').innerText = new Date(data.items[0].played_at).toLocaleString();
+                document.getElementById('time').innerText='';
+                let artistName = [];
+                for (let artist of data.items[0].track.artists) {
+                    artistName.push(artist.name)
+                }
+                document.getElementById('spotify_artistName').innerText = artistName.join(', ');
+
+                getCurrent = setInterval(function () {
+                    getCurrentPlay();
+                }, 1000 * 60)
+            })
+    }
+
+
+    function getCurrentPlay() {
+        axios.get('https://spotify.lanhaoo.club/currentPlaying').then(res => {
+            const data = res.data;
+            if (res.data !== "") {
+                if (getCurrent) {
+                    clearInterval(getCurrent)
+                }
+                document.getElementById('albumCover').src = data.item.album.images[0].url;
+                document.getElementById('playingDes').innerText = '正在播放 Now Playing'
+                document.getElementById('spotify_albumName').innerText = data.item.name;
+
+                let artistName = [];
+                for (let artist of data.item.artists) {
+                    artistName.push(artist.name)
+                }
+                document.getElementById('spotify_artistName').innerText = artistName.join(', ');
+                document.getElementById('span_spotifyTime').innerText = 'It\'s realTime!';
+                document.getElementById('cover_container').setAttribute("class", "albumCover");
+                countProgeress(data);
+
+
+            } else {
+                if (!getCurrent) {
+                    getRecentPlay();
+                }else{
+                    clearInterval(getCurrent);
+                    getRecentPlay();
+                }
+            }
+        });
+    }
+
+    function countProgeress(data) {
+        let nowProgress = data.progress_ms;
+        let totalProgress = data.item.duration_ms;
+        let progressBar = document.getElementById('songProgress');
+
+        let percent = (nowProgress / totalProgress) * 100;
+        progressBar.style.width = percent + '%';
+        progressBar.setAttribute('aria-valuenow', percent.toString());
+        let setProgress = setInterval(function () {
+            nowProgress += 1000;
+            percent = (nowProgress / totalProgress) * 100;
+            if (nowProgress > totalProgress) {
+                nowProgress = totalProgress
+            }
+            document.getElementById('time').innerText = fancyTimeFormat(nowProgress / 1000) + '/' + fancyTimeFormat(totalProgress / 1000);
+            progressBar.style.width = percent + '%';
+            progressBar.setAttribute('aria-valuenow', percent.toString());
+
+            document.getElementById('span_leftToUpdateMusic').innerText = fancyTimeFormat((data.item.duration_ms - nowProgress) / 1000);
+            if (percent > 100) {
+                clearInterval(setProgress)
+                getCurrentPlay();
+            }
+        }, 1000)
+    }
+
+    function fancyTimeFormat(duration) {
+        // Hours, minutes and seconds
+        let hrs = ~~(duration / 3600);
+        let mins = ~~((duration % 3600) / 60);
+        let secs = ~~duration % 60;
+
+        // Output like "1:01" or "4:03:59" or "123:03:59"
+        let ret = "";
+
+        if (hrs > 0) {
+            ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+        }
+
+        ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+        ret += "" + secs;
+        return ret;
+    }
+
+    function getSteps() {
+        const apiUrl = "/myFit/mySteps.php?range=";
+        axios.get(apiUrl + '30days')
+            .then(res => {
+                document.getElementById("span_monthStep").innerText = (res.data.totalSteps).toLocaleString();
+                document.getElementById('span_stepTime').innerText = res.data.data[res.data.data.length - 1].e;
+            })
+
+        axios.get(apiUrl + 'today')
+            .then(res => {
+                document.getElementById("span_todayStep").innerText = (res.data.totalSteps).toLocaleString();
+            })
+
+    }
+
+    function setCounter(id) {
+        let count = 60;
+        let counter = setInterval(function () {
+            document.getElementById(id).innerText = count;
+            count--;
+            if (count === 0) {
+                clearInterval(counter);
+            }
+        }, 1000)
+    }
+
+    function realTimeUpdate() {
+        setCounter('span_leftToUpdateCode');
+        setCounter('span_leftToUpdateSteps');
+
+        setInterval(function () {
+            setCodeHour();
+            setCounter('span_leftToUpdateCode');
+        },1000*60);
+        setInterval(function () {
+            getSteps();
+            setCounter('span_leftToUpdateSteps');
+        },1000*60);
+    }
+
+    getSteps();
+    setCodeHour();
+    getCurrentPlay();
+
+    realTimeUpdate();
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XVD5R67Z7X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XVD5R67Z7X');
+</script>
