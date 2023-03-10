@@ -498,7 +498,7 @@
                 data = res.data;
                 allGithubCommitsCount = data.contributions.reduce((a, b) => a + b.count, 0);
 
-                githubCommitsCount = data.contributions.filter(item => item.date.substr(0, 4) === '2022').reduce((a, b) => a + b.count, 0);
+                githubCommitsCount = data.contributions.filter(item => item.date.substr(0, 4) === '2023').reduce((a, b) => a + b.count, 0);
                 axios.get("/wakatime_chart/api_gitlab_commits.php")
                     .then(res => {
                         if (res.data) {
@@ -507,7 +507,7 @@
                             let b = a.split(",");
                             for (let item of b) {
                                 let c = item.split(":");
-                                if (c[0].substr(1, 4) === '2022') {
+                                if (c[0].substr(1, 4) === '2023') {
                                     gitlabCommits.push({
                                         date: c[0].replace('"', '').replace('"', ''),
                                         count: parseInt(c[1])
